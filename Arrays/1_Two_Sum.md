@@ -7,7 +7,7 @@ Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
 Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-This means I have to choose a number from the array and sum it with the rest of the elements until I find the target. For this, I have to use two nested loops. Using nested loops, the **time complexity** in the worst case will be O(n²) because for each number it will loop over n elements. The **space complexity** is O(1) — constant extra space — no matter whether you use a vector to store the result or return the two indices directly, because the extra storage is always constant (2 integers) and does not grow with n.
+This means I have to choose a number from the array and sum it with the rest of the elements until I find the target. For this, I have to use two nested loops. Using nested loops, the **time complexity** in the worst case will be O(n²) because for each number it will loop over n elements. The **space complexity** is O(1) constant extra space, no matter whether you use a vector to store the result or return the two indices directly, because the extra storage is always constant (2 integers) and does not grow with n.
 
 ```cpp
 for(int i=0; i<nums.size(); i++){
@@ -53,4 +53,10 @@ mp[arr[i]] = i;
 
 ```
 
-**Worst case:** O(n) amortized — unordered_map can have collisions, but lookups are generally considered O(1).
+**Worst case:** O(n) amortized - unordered_map can have collisions, but lookups are generally considered O(1).
+
+**Edge Cases:**
+
+- Empty array, array with only 1 element, no valid pair exists
+
+- Negative numbers, duplicates
