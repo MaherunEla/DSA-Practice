@@ -39,7 +39,10 @@ else right--; // decrease sum
 
 ```
 
-This solution is still not optimal. It can take more time. Now think mathematically: in school, we always solve problems like **x + 5 = 10**. What do we do to find x? We calculate **x = 10 - 5 = 5**. In this problem, we use the same idea but add a trick: subtract each number from the target and check if the result is present in the array. If it is present, then both numbers sum to the target.
+**Since sorting changes the original indices, this method does not work for the original Two Sum problem (LeetCode #1) unless you store (value, original_index) pairs before sorting (which adds O(n) extra space).**
+However, this two-pointer method **can be used for problems like Two Sum II,** where the input array is already sorted.
+
+This solution is still not optimal for the original problem. It can take more time. Now, think mathematically: in school, we always solve problems like **x + 5 = 10**. What do we do to find x? We calculate **x = 10 - 5 = 5**. In this problem, we use the same idea but add a trick: subtract each number from the target and check if the result is present in the array. If it is present, then both numbers sum to the target.
 
 To check if a number exists in the array efficiently, I will use a **hashmap/unordered_map**. There is no need to sort the array, and we only traverse each element once. The **time complexity** will be O(n) and **space complexity** will be O(n) (for the hashmap).
 
