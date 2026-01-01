@@ -1,2 +1,9 @@
 # DSA-Practice
-Collection of algorithm and data structure problems solved for practice and competitive programming.
+
+Added explanations for 3 array problems till now:
+
+- Two Sum
+- Remove Duplicates from Sorted Array
+- Rotate Array
+
+Commit made for tracking progress and contributions.
